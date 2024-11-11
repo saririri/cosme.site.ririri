@@ -1,0 +1,20 @@
+<div class="wrapper">
+<%= form_for @tweet do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :size => 140 %> 
+
+    <%= f.label :genre %>
+    <%= f.text_field :genre, :size => 140 %> 
+
+    <%= f.label :text %>
+    <%= f.text_field :text, :size => 140 %> 
+    
+<div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+    <%= f.submit "編集する" %>
+<% end %>
+
+</div>

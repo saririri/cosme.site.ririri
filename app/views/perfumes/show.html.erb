@@ -1,0 +1,76 @@
+<div class="intoro">
+<h5>化粧水診断結果</h5>
+<p>あなたにおすすめの化粧水は…</p>
+</div>
+<div class="tweet-container">
+<div class="tweet">
+    <% if @perfume.question == "111" %>
+    <h6>脂性肌×敏感肌</h6>
+    <p>キュレル　皮脂トラブルケア　化粧水</p>
+    <p>皮脂を抑えつつ肌トラブルから守ってくれる</p>
+    <a href="https://www.kao.co.jp/curel/products/sebum/"><image src="/assets/kyureru.hishi" class="kyureru"></a>
+    <p>↑画像をクリック</p>
+
+    <% elsif @perfume.question == "112" %>
+    <h6>脂性肌</h6>
+    <p>メラノCC 薬用しみ対策　美白化粧水</p>
+    <p>さっぱりしていて、シミやそばかすを防ぐ</p>
+    <a href="https://jp.rohto.com/melanocc/lotion/"><image src="/assets/cc.jpg" class="kyureru"></a>
+    <p>↑画像をクリック</p>
+   
+   
+    <% elsif @perfume.question == "121" %>
+    <h6>混合肌×敏感肌</h6>
+    <p>レシピオ　モイストローション M</p>
+    <p>しっとり、かつさらっとしていて、水分量の多い肌になれる</p>
+    <a href="https://www.matsukiyococokara-online.com/mkc/recipeo/products/moist_lotion_m/">
+    <img src="/assets/resipioM.jpeg" class="kyureru">
+    </a>
+    <p>↑画像をクリック</p>
+   
+    <% elsif @perfume.question == "122" %>
+    <h6>混合肌</h6>
+    <p>オルビスクリアフルローション　L さっぱり</p>
+    <p>浄化作用があり。気持ちを落ち着かせてくれる</p>
+    <a href="https://www.orbis.co.jp/small/11011102/?srsltid=AfmBOor-MU0kP5zohey3GZcpV-WloEu4eT3ORgavJpO7TGOoPmfEabuI"><image src="/assets/orbis.webp" class="kyureru"></a>
+    <p>↑画像をクリック</p>
+
+    <% elsif @perfume.question == "211" %>
+    <h6>脂性肌×敏感肌</h6>
+    <p>キュレル　皮脂トラブルケア　化粧水</p>
+    <p>皮脂を抑えつつ肌トラブルから守ってくれる</p>
+    <a href="https://www.kao.co.jp/curel/products/sebum/"><image src="/assets/kyureru.hishi" class="kyureru"></a>
+    <p>↑画像をクリック</p>
+
+    <% elsif @perfume.question == "212" %>
+    <h6>脂性肌</h6>
+    <p>メラノCC 薬用しみ対策　美白化粧水</p>
+    <p>さっぱりしていて、シミやそばかすを防ぐ</p>
+    <a href="https://jp.rohto.com/melanocc/lotion/"><image src="/assets/cc.jpg" class="kyureru"></a>
+    <p>↑画像をクリック</p>
+
+    <% elsif @perfume.question == "221" %>
+    <h6>乾燥肌</h6>
+    <p>キュレル　化粧水　Ⅲ(とてもしっとり)
+    <p>肌荒れ、カサつきを解消できる</p>
+    <a href="https://www.kao-kirei.com/ja/item/kbb/curel/4901301236197/?tw=kbb"><image src="/assets/キュレル.webp" class="kyureru"></a>
+    <p>↑画像をクリック</p>
+
+    <% elsif @perfume.question == "222" %>
+    <h6>普通肌</h6>
+    <p>肌ラボ 白潤プレミアム 薬用浸透美白化粧水</p>
+    <p>美白、シミ対策に特化したケアができる</p>
+    <a href="https://jp.rohto.com/hadalabo/promo/s-premium/"><image src="/assets/haku.jpg" class="kyureru"></a>
+    <p>↑画像をクリック</p>
+   
+    <% end %>
+
+    <br>
+    <br>
+
+    <%= link_to "化粧水診断する", new_perfume_path %>
+    <br>
+    <br>
+<%= link_to "ファンデーション診断する", new_dog_path  %>
+
+</div>

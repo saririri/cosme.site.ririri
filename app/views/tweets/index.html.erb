@@ -1,0 +1,79 @@
+<div class="wrapper">
+<div class="postslist"><h1>posts list</h1></div>
+
+
+<h3>keyword search</h3>
+  <%= form_tag({controller:"tweets",action:"index"}, method: :get) do %>
+    <%= text_field_tag :search %>
+
+    <% Tag.all.each do |t| %>
+      <ul><%= check_box :tag_ids, t.name %><%= t.name %></ul>
+    <% end %>
+
+    <%= submit_tag 'search'  %>
+  <% end %>
+
+
+
+<div class="tweets-container">
+  <% @tweets.each do |t| %>
+    <div class="tweet">
+      
+      <%= image_tag t.image_url, size: "250x200" if t.image? %>
+      
+      <% if user_signed_in? %>
+        <% if current_user.already_liked?(t) %>
+            <%= button_to tweet_like_path(id: t.id, tweet_id: t.id), method: :delete do %>
+                <i class="fas fa-heart"></i><%= t.likes.count %>
+            <% end %>
+        <% else %>
+            <%= button_to tweet_likes_path(id: t.id, tweet_id: t.id), method: :post do %>
+              <i class="far fa-heart"></i><%= t.likes.count %>
+            <% end %>
+        <% end %>
+      <% else %>
+        <i class="far fa-heart"></i><%= t.likes.count %>
+      <% end %>
+
+      <br>
+
+
+      <%= t.user.email %>
+      <br>
+      <%= t.genre %>
+      <br>
+      <%= t.name %>
+      <br>
+      <%= t.text %>
+
+      <br>
+
+      <%= t.created_at %>
+
+      
+      <%= button_to "編集する", edit_tweet_path(t.id), method: :get, class: "btn btn-primary" %>
+      <%= button_to "削除する", tweet_path(t.id), method: :delete %> 
+      <br>
+      <br>
+
+      
+    </div>
+  <% end %>
+</div>
+
+  <div class="k">
+        <%= link_to "ログイン", tweets_path %>
+      <br>
+      <br>
+      <%= link_to "新規登録", new_user_registration_path %>
+  </div>
+
+
+
+
+<br>
+<div class="tonewpost">
+  <b href="#"><%= link_to "to new post", new_tweet_path %></b>
+  </div>
+
+</div>

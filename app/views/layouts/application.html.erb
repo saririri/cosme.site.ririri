@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cosme</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <script src="https://kit.fontawesome.com/~~~~~~"  crossorigin="anonymous"></script> 
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@20
+0..900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+  <header>
+  <div class="cp_contents">
+		<h1>cosmetic site</h1>
+		</div>
+  </header>
+  <div class=aaa>
+
+	<div class="cp_offcm01">
+		<input type="checkbox" id="cp_toggle01">
+		<label for="cp_toggle01"><span></span></label>
+		<div class="cp_menu">
+		<ul>
+  <li class="top"><%= link_to "Sign up", new_user_registration_path %></li>
+  <li><%= link_to "Sign in", new_user_session_path %></li>
+  <li><%= link_to "Diagnosis", perfumes_path %></li>
+  <li><%= link_to "Post", new_tweet_path %></li>
+  <div class="logout">
+  <%= button_to 'logout', destroy_user_session_path, method: :delete %>
+  </div>
+    </ul>
+		</div>
+	</div>
+
+  <main>
+   <%= yield %>
+  </main>
+</div>
+
+  
+
+
+
+ </body>
+ 
+</html>
+

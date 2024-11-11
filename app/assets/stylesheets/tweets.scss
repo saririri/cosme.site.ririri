@@ -1,0 +1,184 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.a{
+color: #5b3a45;
+text-align: center;
+font-family: Noto Serif JP;
+font-size: 60 px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-top: 20px;
+}
+
+.wrapper {
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    text-align: center;
+}
+
+.wrapper2 {
+    background-image: url('pink1.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    padding-top: 290px;
+}
+
+.j{
+padding-top: 10px;
+}
+
+.signup{
+    position: absolute;
+    top: 300px;
+    left: 650px;
+}
+
+.signin{
+    position: absolute;
+    top: 300px;
+    left: 650px;
+}
+
+.dogs{
+    position: absolute;
+    top: 300px;
+    left: 650px;
+}
+
+.perfumes{
+    position: absolute;
+    top: 300px;
+    left: 650px;
+}
+
+
+.tonewpost b {
+    background: #eee;
+    border-radius: 9999px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 250px;
+    padding: 10px 25px;
+    font-family: "Noto Sans Japanese";
+    color: #333333;
+    line-height: 1.8;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+.tonewpost b:hover {
+    background: #333333;
+    color: #FFF;
+}
+.tonewpost b:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #333333;
+    border-right: 3px solid #333333;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.tonewpost b:hover:after {
+    border-color: #FFF;
+}
+
+
+.topostslist c {
+    background: #eee;
+    border-radius: 9999px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 250px;
+    padding: 10px 25px;
+    font-family: "Noto Sans Japanese";
+    color: #333333;
+    line-height: 1.8;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+.topostslist c:hover {
+    background: #333333;
+    color: #FFF;
+}
+.topostslist c:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #333333;
+    border-right: 3px solid #333333;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.topostslist c:hover:after {
+    border-color: #FFF;
+}
+body{
+    vertical-align:middle; 
+    padding: 50px 0;
+    text-align: center;
+}
+
+.tweet{
+    margin: 50px 0;
+}
+
+.postslist{
+    margin: 50px 0;
+}
+
+
+.wrapper3 {
+    background-image: url('pink1.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    padding-top: 120px;
+}
+
+.tweet{
+    
+    margin: 50px 0;
+    width: 25%;
+}
+.tweets-container{
+    flex-wrap: wrap;
+    display: flex;
+
+}
+
+.edit{
+    margin: 50px 0;
+}
+
+.k{
+    margin: 50px 0;
+}

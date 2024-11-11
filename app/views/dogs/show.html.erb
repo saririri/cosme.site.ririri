@@ -1,0 +1,84 @@
+<div class="intoro">
+<h5>診断結果</h5>
+<p>あなたにおすすめのファンデーションは…</p>
+</div>
+<div class="tweet-container">
+<div class="tweet">
+    <% if @dog.question == "111" %>
+    <h6>リキッドタイプ</h6>
+    <p>アディクション　ザ ファンデーション　リフトグロウ</p>
+    <p>保湿力、素肌感のあるつやがありつつ、カバー力も備えている</p>
+    <a href="https://www.addiction-beauty.com/site/g/gMAFT001/">
+    <image src="/assets/adi.jpg" class="kyureru"></a>
+    <p>↑画像をクリック</p>
+
+    <% elsif @dog.question == "112" %>
+    <h6>クッションタイプ</h6>
+    <p>タンクッションエクラ ルミヌ</p>
+    <p>崩れにくく、みずみずしい仕上がり</p>
+    <a href="https://www.cledepeau-beaute.com/jp/G61901.html?dwvar_G61901_color=%E3%82%AA%E3%83%BC%E3%82%AF%E3%83%AB10&cgid=products-makeup-face-foundations">
+    <image src="/assets/cre.png" class="kyureru"></a>
+    <p>↑画像をクリック</p>
+ 
+
+    <% elsif @dog.question == "121" %>
+    <h6>リキッドタイプ</h6>
+    <p>ライトリフレクティング　ファンデーション</p>
+    <p>肌のアラをぼかし、美しい陶器肌になれる</p>
+    <a href="https://www.narscosmetics.jp/light-reflecting-foundation/G23801.html?dwvar_G23801_color=02166&cgid=foundation">
+    <image src="/assets/nars.jpg" class="kyureru"></a>
+    <p>↑画像をクリック</p>
+
+    <% elsif @dog.question == "122" %>
+    <h6>リキッドタイプ</h6>
+    <p>ダブル ウェア ステイ イン プレイス メークアップ</p>
+    <p>高いカバー力が続き、崩れにくい</p>
+    <a href="https://www.esteelauder.jp/product/643/3894/product-catalog/double-wear/stay-in-place-makeup-spf-10pa?_gl=1*1zyqjd*_up*MQ..&gclid=Cj0KCQiA0MG5BhD1ARIsAEcZtwQ96Mc679cBbtQe">
+    <image src="/assets/est.jpg" class="kyureru"></a>
+    <p>↑画像をクリック</p>
+
+
+    <% elsif @dog.question == "211" %>
+    <h6>リキッドタイプ</h6>
+    <p>ゼン ウェア グロウ</p>
+    <p>乾燥知らずな薄膜カバーのつや肌になれる</p>
+    <a href="https://www.decorte.com/site/g/gJEAT026/">
+    <image src="/assets/deco.jpg" class="kyureru"></a>
+    <p>↑画像をクリック</p>
+
+    <% elsif @dog.question == "212" %>
+    <h6>パウダータイプ</h6>
+    <p>ドラマティックパウダリー　EX</p>
+    <a href="https://maquillage.shiseido.co.jp/features/dramatic-powdery-ex/">
+    <image src="/assets/maki.webp" class="kyureru"></a>
+    <p>↑画像をクリック</p>
+
+    <% elsif @dog.question == "221" %>
+    <h6>クリームタイプ</h6>
+    <p>RMK ラスティング ジェルクリーミィファンデーション</p>
+    <p>素肌感があるのに、しっかり作り込まれたマット肌を実現できる</p>
+    <a href="https://www.rmkrmk.com/ja/categories/basemakeup/foundation/p/4973167517482">
+    <image src="/assets/rmk.jpg" class="kyureru"></a>
+    <p>↑画像をクリック</p>
+
+
+    <% elsif @dog.question == "222" %>
+    <h6>リキッドタイプ</h6>
+    <p>ディオールスキン フォーエヴァー フルイド マット</p>
+    <p>一日中崩れにくく、マット肌を叶えてくれる</p>
+    <a href="https://www.dior.com/ja_jp/beauty/products/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%BC%E3%83%AB%E3%82%B9%E3%82%AD%E3%83%B3-%E3%83%95%E3%82%A9%E3%83%BC%E3%82%A8%E3%83%B4%E3%82%A1%E3%83%BC-%E3%83%95%E3%83%AB%E3%82%A4%E3%83%89-%E3%83%9E%E3%83%83%E3%83%88-spf-20-pa-Y0996397.html">
+    <image src="/assets/dior.mat.webp" class="kyureru"></a>
+    <p>↑画像をクリック</p>
+
+
+    <% end %>
+
+        <br>
+    <br>
+
+    <%= link_to "化粧水診断する", new_perfume_path %>
+    <br>
+    <br>
+<%= link_to "ファンデーション診断する", new_dog_path %>
+
+</div>

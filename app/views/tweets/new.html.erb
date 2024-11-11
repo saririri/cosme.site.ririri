@@ -1,0 +1,63 @@
+<div class="wrapper3">
+<div class="j"><h3>new post</h3></div>
+<%= form_for @tweet do |f| %>
+
+
+  <div class="field">
+    <%= f.label :商品名 %>
+    <%= f.text_field :name, :size => 30 %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :ジャンル  %>
+    <%= f.select :genre, 
+    [["化粧水", "化粧水"], 
+    ["ファンデーション", "ファンデーション"],
+    ["下地", "下地"],
+    ["その他", "その他"]], include_blank: "選択して下さい" %>
+  </div>
+
+  <div class="field">
+  <div class="f">
+  <%= f.label :その他の場合は商品カテゴリーを記入  %>
+  </div>
+  <%= f.text_area :text, :size => "50x2" %>
+　</div>
+
+  <div class="field">
+    <div class="f">
+    <%= f.label :コメント  %>
+    </div>
+    <%= f.text_area :text, :size => "50x2" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+  <br>
+
+  <div class='form-group'>
+        <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+            <div class='form-check'>
+                <%= tag.label class: 'form-check-label' do %>
+                    <%= tag.check_box class: 'form-check-input' %>
+                    <%= tag.text %>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+
+<br>
+
+  <%= f.submit "post" %>
+<% end %>
+<br>
+<br>
+
+<div class="topostslist">
+  <c href="#"><%= link_to "to posts list", tweets_path %></c>
+  </div>
+
+</div>
