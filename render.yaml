@@ -1,0 +1,21 @@
+databases:
+  - name: cosme_DB
+    databaseName: cosme_db
+    user: cosme
+    region: singapore
+
+services:
+  - type: web
+    name: cosme
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: cosme_DB
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
