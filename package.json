@@ -21,6 +21,9 @@
     "babel-loader": "^8.2.2",
     "webpack-dev-server": "^3"
   },
+  "engines": {
+    "node": "16.20.2"
+  },
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development"
